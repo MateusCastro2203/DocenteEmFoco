@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="178.675" height="167" viewBox="0 0 178.675 167">
+  <defs>
+    <filter id="Icon_awesome-certificate" x="0" y="0" width="178.675" height="167" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Icon_awesome-certificate)">
+    <path id="Icon_awesome-certificate-2" data-name="Icon awesome-certificate" d="M143.925,74.477l14.431-13.1c4.3-3.777,2.3-10.488-3.347-11.739l-19.661-4.653,5.542-18.047c1.566-5.191-3.712-10.087-9.308-8.635l-19.455,5.141L107.111,5.208C105.784.057,98.466-1.826,94.457,2.1L80.338,15.59,66.219,2.1C62.256-1.781,54.907,0,53.565,5.208L48.549,23.447,29.093,18.305c-5.6-1.453-10.874,3.445-9.308,8.635l5.542,18.047L5.667,49.641C.022,50.892-1.98,57.6,2.32,61.38l14.431,13.1L2.32,87.574c-4.3,3.777-2.3,10.488,3.347,11.739l19.661,4.653-5.542,18.047c-1.566,5.191,3.712,10.087,9.308,8.635l19.455-5.141,5.016,18.238c1.393,5.406,8.692,6.99,12.655,3.1l14.119-13.387L94.456,146.85c3.923,3.925,11.293,2.179,12.655-3.1l5.016-18.238,19.455,5.141c5.6,1.453,10.874-3.445,9.308-8.635l-5.542-18.047,19.661-4.653c5.645-1.252,7.647-7.964,3.347-11.739l-14.431-13.1Z" transform="translate(9 6)" fill="#b5b5b5"/>
+  </g>
+</svg>
