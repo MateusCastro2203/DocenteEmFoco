@@ -1,0 +1,17 @@
+.Buttons Button{
+    width: 40%;
+    display: inline;
+    margin: 12px;
+}
+.hide{
+    display: none;
+}
+.name{
+    display: inline-flex;
+    width: 100%;
+}
+.moreAbout{
+    margin: 0;
+    display: inline-flex;
+    width: 100%;
+}
