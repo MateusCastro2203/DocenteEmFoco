@@ -2,6 +2,9 @@ import React, { useState, UseEfect } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { useForm } from "react-hook-form";
 import './ModalLog.css';
+import { Link, withRouter } from "react-router-dom";
+import api from "../service/api";
+import { login } from "../service/auth";
 
 const ModalLog = () => {
 
@@ -13,14 +16,47 @@ const ModalLog = () => {
     }
 
     const { register, handleSubmit, errors } = useForm();
-    function newUser(data) {
+
+    const newUser = async(data)  => {
+        if(!data.email || !data.psw || !data.nome || !data.sobrenome || !data.nascimento || !data.sexo || !data.profissao){
+            alert("Preencha todos os campos")
+        }
+        else{
+            try{
+                console.log(data);
+                //await api.post("/createUser", {data});
+                
+                this.props.history.push("/home");
+            } catch{
+                alert("Ocorreu um erro ao registrar sua conta. T.T")
+            }
+        }
         console.log("Data submitted: ", data);
     }
-    function login(data){
+
+    const loginUser = async(data)=>{
+        if(!data.email || !data.psw ){
+            alert("Preencha todos os campos")
+        }
+        else{
+            var email = data.email;
+            var psw = data.psw;
+            console.log(this.props.history.push("/home"))
+            try{
+                //const response = await api.post("/sessions",{email, psw});
+                //login(response.data.token);
+                
+               // this.props.history.push("/home")
+            } catch{
+                
+                alert("Houve um problema com o login, verifique suas credenciais.")
+            }
+        }
         console.log("Data submitted: ", [data.email, data.psw]);
     }
+
     return (
-        <div>
+        <div>            
             <Form>
                 <Form.Group controlId="formBasicEmail">
                     <Form.Label>Email</Form.Label>
@@ -101,7 +137,7 @@ const ModalLog = () => {
                 </div>
                     <div className={ControllVisibillityButton}>
                         <div className="Buttons">
-                            <Button variant="success" type="submit" onClick={handleSubmit(login)}>
+                            <Button variant="success" type="submit" onClick={handleSubmit(loginUser)}>
                                 Entrar
                     </Button>
                             <Button variant="primary" onClick={Control}>
@@ -114,4 +150,4 @@ const ModalLog = () => {
     )
 }
 
-export default ModalLog
+export default withRouter(ModalLog)

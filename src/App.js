@@ -1,12 +1,5 @@
 import React from 'react'
-import Index from './Pages/home/index'
+import Routes from "./routes";
 
-function App() {
-  return (
-    <div className="App">
-      <Index></Index>
-    </div>
-  );
-}
-
+const App = () =>  <Routes />
 export default App;
